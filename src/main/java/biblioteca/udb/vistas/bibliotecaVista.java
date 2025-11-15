@@ -1,5 +1,6 @@
 package biblioteca.udb.vistas;
 
+
 import biblioteca.udb.vistas.AudioVideoVista.*;
 import biblioteca.udb.vistas.textoVista.*;
 import biblioteca.udb.vistas.CartograficaVista.*;
@@ -9,9 +10,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import biblioteca.udb.FormularioPrestamos; //AGREGADO por Diego
 
 public class bibliotecaVista extends JFrame implements ActionListener {
-    private JButton btnLibro, btnRevista, btnTesis, btnPeriodico, btnFolleto, btnCD, btnDVD, btnAudioLibros, btnMapas, btnAtlas, btnEbooks, btnInformesTecnicos;
+    private JButton btnLibro, btnRevista, btnTesis, btnPeriodico, btnFolleto, btnCD, btnDVD, btnAudioLibros, btnMapas, btnAtlas, btnEbooks, btnInformesTecnicos, btnPrestamos;
 
     public bibliotecaVista() {
         setTitle("Sistema Biblioteca");
@@ -21,6 +23,7 @@ public class bibliotecaVista extends JFrame implements ActionListener {
 
         add(new JLabel("Seleccione tipo de ejemplar:"));
 
+        btnPrestamos = new JButton("Realizar Préstamo"); //️ AGREGADO por Diego
         btnLibro = new JButton("Libro");
         btnRevista = new JButton("Revista");
         btnTesis = new JButton("Tesis");
@@ -34,6 +37,8 @@ public class bibliotecaVista extends JFrame implements ActionListener {
         btnEbooks = new JButton("Ebooks");
         btnInformesTecnicos = new JButton("Informes Tecnicos");
 
+        
+        btnPrestamos.addActionListener(this); //  AGREGADO por Diego
         btnLibro.addActionListener(this);
         btnRevista.addActionListener(this);
         btnTesis.addActionListener(this);
@@ -47,6 +52,8 @@ public class bibliotecaVista extends JFrame implements ActionListener {
         btnEbooks.addActionListener(this);
         btnInformesTecnicos.addActionListener(this);
 
+        
+        add(btnPrestamos); //️ AGREGADO por Diego
         add(btnLibro);
         add(btnRevista);
         add(btnTesis);
@@ -90,6 +97,8 @@ public class bibliotecaVista extends JFrame implements ActionListener {
             new EBookVista();
         } else if (e.getSource() == btnInformesTecnicos) {
             new InformesTecnicosVista();
+        } else if (e.getSource() == btnPrestamos) {
+            new FormularioPrestamos().setVisible(true); // ⬅️ AGREGADO por Diego
         }
     }
 
