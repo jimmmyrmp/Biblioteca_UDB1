@@ -7,12 +7,12 @@ package biblioteca.udb;
 import java.sql.Connection;
 import javax.swing.SpinnerNumberModel;
 
-public class FormularioConfiguracion extends javax.swing.JFrame {
+public class FormularioConfiguracionEJEM extends javax.swing.JFrame {
     
-    // Variables para Persona 4
-    private ConfiguracionDAO configuracionDAO;
+    
+    private ConfiguracionEJEM configuracionDAO;
 
-    public FormularioConfiguracion() {
+    public FormularioConfiguracionEJEM() {
         initComponents();
         inicializar();
     }
@@ -20,7 +20,7 @@ public class FormularioConfiguracion extends javax.swing.JFrame {
     private void inicializar() {
         try {
             Connection conn = ConexionBD.conectar();
-            configuracionDAO = new ConfiguracionDAO(conn);
+            configuracionDAO = new ConfiguracionEJEM(conn);
             
             SpinnerNumberModel modelo = new SpinnerNumberModel(3, 1, 10, 1);
             spnMaxEjemplares.setModel(modelo);
@@ -53,7 +53,7 @@ public class FormularioConfiguracion extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(0, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("Configuración de Préstamos");
+        jLabel1.setText("Configuración de préstamos de ejemplares ");
 
         jLabel2.setText("Máximo de ejemplares por préstamo:");
 
@@ -86,23 +86,24 @@ public class FormularioConfiguracion extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(lblValorActual, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(124, 124, 124))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(186, 186, 186))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(163, 163, 163)
-                .addComponent(btnGuardar)
-                .addGap(142, 142, 142)
-                .addComponent(btnCancelar)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(163, 163, 163)
+                        .addComponent(btnGuardar)
+                        .addGap(142, 142, 142)
+                        .addComponent(btnCancelar))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(131, 131, 131)
+                        .addComponent(jLabel1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(spnMaxEjemplares, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -120,16 +121,16 @@ public class FormularioConfiguracion extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(26, 26, 26)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
@@ -146,7 +147,7 @@ guardarConfiguracion();
 
     private void cargarValorActual() {
         try {
-            Configuracion config = configuracionDAO.obtenerConfiguracion("MAX_EJEMPLARES_PRESTAMO");
+            ConfiguracionEJEMPLARES config = configuracionDAO.obtenerConfiguracion("MAX_EJEMPLARES_PRESTAMO");
             if (config != null) {
                 int valorActual = config.getValorEntero();
                 spnMaxEjemplares.setValue(valorActual);
@@ -201,12 +202,12 @@ guardarConfiguracion();
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FormularioConfiguracion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormularioConfiguracionEJEM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FormularioConfiguracion().setVisible(true);
+                new FormularioConfiguracionEJEM().setVisible(true);
             }
         });
     }

@@ -5,11 +5,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EjemplarDAO {
+public class Ejemplar1 {
     
     private Connection conexion;
     
-    public EjemplarDAO(Connection conexion) {
+    public Ejemplar1(Connection conexion) {
         this.conexion = conexion;
     }
     

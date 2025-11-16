@@ -2,16 +2,16 @@ package biblioteca.udb;
 
 import java.sql.*;
 
-public class ConfiguracionDAO {
+public class ConfiguracionEJEM {
     
     private Connection conexion;
     
-    public ConfiguracionDAO(Connection conexion) {
+    public ConfiguracionEJEM(Connection conexion) {
         this.conexion = conexion;
     }
     
-    public Configuracion obtenerConfiguracion(String parametro) {
-        Configuracion config = null;
+    public ConfiguracionEJEMPLARES obtenerConfiguracion(String parametro) {
+        ConfiguracionEJEMPLARES config = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         
@@ -23,7 +23,7 @@ public class ConfiguracionDAO {
             rs = pstmt.executeQuery();
             
             if (rs.next()) {
-                config = new Configuracion();
+                config = new ConfiguracionEJEMPLARES();
                 config.setParametro(rs.getString("parametro"));
                 config.setValor(rs.getString("valor"));
                 config.setDescripcion(rs.getString("descripcion"));
@@ -71,10 +71,10 @@ public class ConfiguracionDAO {
     }
     
     public int obtenerMaxEjemplares() {
-        Configuracion config = obtenerConfiguracion("MAX_EJEMPLARES_PRESTAMO");
+        ConfiguracionEJEMPLARES config = obtenerConfiguracion("MAX_EJEMPLARES_PRESTAMO");
         if (config != null) {
             return config.getValorEntero();
         }
-        return 3; // Valor por defecto
+        return 3; // 3 es el valor por defecto
     }
 }

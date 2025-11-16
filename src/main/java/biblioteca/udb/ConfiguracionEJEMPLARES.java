@@ -1,15 +1,15 @@
 package biblioteca.udb;
 
-public class Configuracion {
+public class ConfiguracionEJEMPLARES {
     private int idConfig;
     private String parametro;
     private String valor;
     private String descripcion;
 
-    public Configuracion() {
+    public ConfiguracionEJEMPLARES() {
     }
 
-    public Configuracion(String parametro, String valor, String descripcion) {
+    public ConfiguracionEJEMPLARES(String parametro, String valor, String descripcion) {
         this.parametro = parametro;
         this.valor = valor;
         this.descripcion = descripcion;
