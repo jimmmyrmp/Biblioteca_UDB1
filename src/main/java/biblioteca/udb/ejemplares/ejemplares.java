@@ -31,6 +31,29 @@ public class ejemplares {
     public String getUbicacion() { return ubicacion; }
     public boolean isDisponible() { return disponible; }
     public String getTipo() { return tipo; };
+    public void setCodigo(String codigo) {
+    this.codigo = codigo;
+}
+
+public void setTitulo(String titulo) {
+    this.titulo = titulo;
+}
+
+public void setAutor(String autor) {
+    this.autor = autor;
+}
+
+public void setAño(int año) {
+    this.año = año;
+}
+
+public void setUbicacion(String ubicacion) {
+    this.ubicacion = ubicacion;
+}
+
+public void setTipo(String tipo) {
+    this.tipo = tipo;
+}
 
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
