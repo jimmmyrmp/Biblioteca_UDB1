@@ -46,9 +46,6 @@ public class ConsultaEjemplaresFORM extends javax.swing.JFrame {
     }
 
  
-    private void btnMostrarTodosActionPerformed(java.awt.event.ActionEvent evt) {                                                
-        cargarTodosLosEjemplares();
-    }                                               
 
    
     //  columnas de la tabla
@@ -174,6 +171,11 @@ public class ConsultaEjemplaresFORM extends javax.swing.JFrame {
         });
 
         btnMostrarTodos.setText("Mostrar Todos");
+        btnMostrarTodos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarTodosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -273,6 +275,10 @@ public class ConsultaEjemplaresFORM extends javax.swing.JFrame {
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
          buscarEjemplares();
     }//GEN-LAST:event_btnBuscarActionPerformed
+
+    private void btnMostrarTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarTodosActionPerformed
+        cargarTodosLosEjemplares();
+    }//GEN-LAST:event_btnMostrarTodosActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
