@@ -1,13 +1,13 @@
 package biblioteca.udb;
 
-public class devoluciones extends javax.swing.JFrame {
+public class Devoluciones extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(devoluciones.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Devoluciones.class.getName());
 
     /**
      * Creates new form Devoluciones
      */
-    public devoluciones() {
+    public Devoluciones() {
         initComponents();
     }
 
@@ -24,12 +24,11 @@ public class devoluciones extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtCodigoEjemplar1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtIdUsuario1 = new javax.swing.JTextPane();
         btnRealizarDevolucion1 = new javax.swing.JButton();
         btnCancelar1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         areaResultados1 = new javax.swing.JTextArea();
+        txtIdUsuario1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,8 +40,6 @@ public class devoluciones extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel5.setText("ID usuario:");
-
-        jScrollPane1.setViewportView(txtIdUsuario1);
 
         btnRealizarDevolucion1.setText("Realizar Devolucion");
         btnRealizarDevolucion1.addActionListener(new java.awt.event.ActionListener() {
@@ -66,18 +63,6 @@ public class devoluciones extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtCodigoEjemplar1, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
-                .addGap(44, 44, 44))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jLabel5)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(btnRealizarDevolucion1)
@@ -93,6 +78,19 @@ public class devoluciones extends javax.swing.JFrame {
                         .addGap(69, 69, 69)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(79, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel5)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtCodigoEjemplar1, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                    .addComponent(txtIdUsuario1))
+                .addGap(44, 44, 44))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,16 +102,16 @@ public class devoluciones extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCodigoEjemplar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                    .addComponent(txtIdUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRealizarDevolucion1)
                     .addComponent(btnCancelar1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
@@ -135,7 +133,7 @@ public class devoluciones extends javax.swing.JFrame {
             int idUsuario = Integer.parseInt(idUsuarioTexto);
 
             // Crear instancia de GestionDevoluciones (debe tener los métodos necesarios)
-            GestionDevoluciones gestionDevoluciones = new GestionDevoluciones();
+           GestionDevoluciones gestionDevoluciones = new GestionDevoluciones(); 
 
             // Verificar que el ejemplar está prestado al usuario
             if (!gestionDevoluciones.ejemplarPrestadoAUsuario(idUsuario, codigoEjemplar)) {
@@ -180,7 +178,7 @@ public class devoluciones extends javax.swing.JFrame {
         }
         }
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRealizarDevolucion1ActionPerformed
+    //GEN-LAST:event_btnRealizarDevolucion1ActionPerformed
 
     private void btnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar1ActionPerformed
 
@@ -217,7 +215,7 @@ public class devoluciones extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new devoluciones().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Devoluciones().setVisible(true));
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea areaResultados1;
@@ -226,9 +224,9 @@ public class devoluciones extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField txtCodigoEjemplar1;
-    private javax.swing.JTextPane txtIdUsuario1;
+    private javax.swing.JTextField txtIdUsuario1;
     // End of variables declaration//GEN-END:variables
 
+}
