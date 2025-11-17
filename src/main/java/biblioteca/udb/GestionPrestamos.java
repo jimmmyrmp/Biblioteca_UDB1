@@ -15,74 +15,96 @@ public class GestionPrestamos {
     
     // Método para verificar si un usuario tiene mora
     public boolean usuarioTieneMora(int idUsuario) {
-        Connection conexion = ConexionBD.conectar();
-        
-        if (conexion == null) {
-            return true; // Si no hay conexión, no permitir préstamo
-        }
+        Connection conexion = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
         
         try {
+            conexion = ConexionBD.conectar();
+            
+                    if (conexion == null) {
+            return true; // Si no hay conexión, no permitir préstamo
+        }
+                    
             String sql = "SELECT COUNT(*) as total FROM prestamos " +
                         "WHERE id_usuario = ? AND estado = 'MORA'";
-            PreparedStatement stmt = conexion.prepareStatement(sql);
+            stmt = conexion.prepareStatement(sql);
             stmt.setInt(1, idUsuario);
             
-            ResultSet rs = stmt.executeQuery();
+            rs = stmt.executeQuery();
             
             if (rs.next()) {
-                int total = rs.getInt("total");
-                stmt.close();
-                ConexionBD.cerrarConexion(conexion);
+                int total = rs.getInt("total"); 
                 return total > 0; // Retorna true si tiene mora
             }
             
-            stmt.close();
-            ConexionBD.cerrarConexion(conexion);
             return false;
             
         } catch (SQLException e) {
             System.out.println("Error al verificar mora: " + e.getMessage());
-            ConexionBD.cerrarConexion(conexion);
             return true; // Por seguridad, no permitir préstamo si hay error
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (stmt != null) stmt.close();
+                if (conexion != null) conexion.close();
+            } catch (SQLException e){
+                System.out.println("Error al cerrar recursos: " + e.getMessage());
+            }
         }
     }
     
     // Método para verificar si un ejemplar está disponible
     public boolean ejemplarDisponible(String codigoEjemplar) {
-        Connection conexion = ConexionBD.conectar();
         
-        if (conexion == null) {
-            return false;
-        }
+        Connection conexion = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
         
         try {
+            conexion = ConexionBD.conectar();
+            
+            if (conexion == null) {
+            return false;
+        }
+            
             String sql = "SELECT disponible FROM ejemplares WHERE codigo = ?";
-            PreparedStatement stmt = conexion.prepareStatement(sql);
+            stmt = conexion.prepareStatement(sql);
             stmt.setString(1, codigoEjemplar);
             
-            ResultSet rs = stmt.executeQuery();
+            rs = stmt.executeQuery();
             
             if (rs.next()) {
                 int disponible = rs.getInt("disponible");
-                stmt.close();
-                ConexionBD.cerrarConexion(conexion);
                 return disponible == 1; // Retorna true si está disponible
             }
             
-            stmt.close();
-            ConexionBD.cerrarConexion(conexion);
             return false;
             
         } catch (SQLException e) {
             System.out.println("Error al verificar disponibilidad: " + e.getMessage());
-            ConexionBD.cerrarConexion(conexion);
             return false;
-        }
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (stmt != null) stmt.close();
+                if (conexion != null) conexion.close();
+            } catch (SQLException e){
+                System.out.println("Error al cerrar recursos: " + e.getMessage());
+            }
+    }
     }
     
     // Método para realizar un préstamo
     public boolean realizarPrestamo(int idUsuario, String codigoEjemplar, int diasPrestamo) {
-        Connection conexion = ConexionBD.conectar();
+        
+        Connection conexion = null;
+        PreparedStatement stmtPrestamo = null;
+        PreparedStatement stmtEjemplar = null;
+        
+        try {
+            
+        conexion = ConexionBD.conectar();
         
         if (conexion == null) {
             return false;
@@ -101,8 +123,7 @@ public class GestionPrestamos {
             ConexionBD.cerrarConexion(conexion);
             return false;
         }
-        
-        try {
+            
             // Calcular fechas
             Date fechaPrestamo = new Date();
             Calendar calendar = Calendar.getInstance();
@@ -113,7 +134,7 @@ public class GestionPrestamos {
             // Insertar el préstamo
             String sqlPrestamo = "INSERT INTO prestamos (id_usuario, codigo_ejemplar, fecha_prestamo, fecha_devolucion, estado) " +
                                 "VALUES (?, ?, ?, ?, 'ACTIVO')";
-            PreparedStatement stmtPrestamo = conexion.prepareStatement(sqlPrestamo);
+            stmtPrestamo = conexion.prepareStatement(sqlPrestamo);
             
             stmtPrestamo.setInt(1, idUsuario);
             stmtPrestamo.setString(2, codigoEjemplar);
@@ -125,43 +146,50 @@ public class GestionPrestamos {
             if (resultado > 0) {
                 // Actualizar disponibilidad del ejemplar
                 String sqlEjemplar = "UPDATE ejemplares SET disponible = 0 WHERE codigo = ?";
-                PreparedStatement stmtEjemplar = conexion.prepareStatement(sqlEjemplar);
+                stmtEjemplar = conexion.prepareStatement(sqlEjemplar);
                 stmtEjemplar.setString(1, codigoEjemplar);
                 stmtEjemplar.executeUpdate();
-                stmtEjemplar.close();
                 
                 System.out.println("Préstamo realizado exitosamente");
-                stmtPrestamo.close();
-                ConexionBD.cerrarConexion(conexion);
                 return true;
             }
             
-            stmtPrestamo.close();
-            ConexionBD.cerrarConexion(conexion);
             return false;
             
         } catch (SQLException e) {
             System.out.println("Error al realizar préstamo: " + e.getMessage());
-            ConexionBD.cerrarConexion(conexion);
             return false;
+        } finally {
+            try{
+                if (stmtPrestamo != null) stmtPrestamo.close();
+                if (stmtEjemplar != null) stmtEjemplar.close();
+                if (conexion != null) conexion.close();
+            } catch (SQLException e){
+                System.out.println("Error al cerrar recursos: " + e.getMessage());
+            }
         }
     }
     
     // Método para obtener información de un préstamo activo por usuario
     public Prestamo obtenerPrestamoActivo(int idUsuario, String codigoEjemplar) {
-        Connection conexion = ConexionBD.conectar();
+        Connection conexion = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        
+        try {
+            
+        conexion = ConexionBD.conectar();
         
         if (conexion == null) {
             return null;
         }
-        
-        try {
+            
             String sql = "SELECT * FROM prestamos WHERE id_usuario = ? AND codigo_ejemplar = ? AND estado = 'ACTIVO'";
-            PreparedStatement stmt = conexion.prepareStatement(sql);
+            stmt = conexion.prepareStatement(sql);
             stmt.setInt(1, idUsuario);
             stmt.setString(2, codigoEjemplar);
             
-            ResultSet rs = stmt.executeQuery();
+            rs = stmt.executeQuery();
             
             if (rs.next()) {
                 Prestamo prestamo = new Prestamo(
@@ -172,19 +200,23 @@ public class GestionPrestamos {
                     rs.getDate("fecha_devolucion"),
                     rs.getString("estado")
                 );
-                stmt.close();
-                ConexionBD.cerrarConexion(conexion);
+ 
                 return prestamo;
             }
             
-            stmt.close();
-            ConexionBD.cerrarConexion(conexion);
             return null;
             
         } catch (SQLException e) {
             System.out.println("Error al obtener préstamo: " + e.getMessage());
-            ConexionBD.cerrarConexion(conexion);
             return null;
+        } finally {
+            try{
+                if (rs != null) rs.close();
+                if (stmt != null) stmt.close();
+                if (conexion != null) conexion.close();
+            } catch (SQLException e){
+                System.out.println("Error al cerrar recursos: " + e.getMessage());
+            }
         }
     }
 }
