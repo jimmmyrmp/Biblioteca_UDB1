@@ -156,6 +156,7 @@ public class ConsultaEjemplaresFORM extends javax.swing.JFrame {
         lblTotal = new javax.swing.JLabel();
         lblDisponibles = new javax.swing.JLabel();
         lblPrestados = new javax.swing.JLabel();
+        volverMenu = new javax.swing.JButton();
         tblEjemplares = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
 
@@ -210,17 +211,28 @@ public class ConsultaEjemplaresFORM extends javax.swing.JFrame {
 
         lblPrestados.setText("Prestados: 0");
 
+        volverMenu.setText("Volver al menu");
+        volverMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverMenuActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(lblTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblDisponibles, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(204, 204, 204)
-                .addComponent(lblPrestados, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 232, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(volverMenu)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(lblDisponibles, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(193, 193, 193)
+                        .addComponent(lblPrestados, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(91, 91, 91))
         );
         jPanel3Layout.setVerticalGroup(
@@ -231,7 +243,9 @@ public class ConsultaEjemplaresFORM extends javax.swing.JFrame {
                     .addComponent(lblDisponibles)
                     .addComponent(lblTotal)
                     .addComponent(lblPrestados))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addComponent(volverMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
@@ -280,6 +294,10 @@ public class ConsultaEjemplaresFORM extends javax.swing.JFrame {
         cargarTodosLosEjemplares();
     }//GEN-LAST:event_btnMostrarTodosActionPerformed
 
+    private void volverMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverMenuActionPerformed
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_volverMenuActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBuscar;
@@ -293,5 +311,6 @@ public class ConsultaEjemplaresFORM extends javax.swing.JFrame {
     private javax.swing.JLabel lblTotal;
     private javax.swing.JScrollPane tblEjemplares;
     private javax.swing.JTextField txtBuscar;
+    private javax.swing.JButton volverMenu;
     // End of variables declaration//GEN-END:variables
 }

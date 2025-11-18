@@ -178,7 +178,7 @@ public class Devoluciones extends javax.swing.JFrame {
         }
         }
         // TODO add your handling code here:
-    //GEN-LAST:event_btnRealizarDevolucion1ActionPerformed
+//GEN-LAST:event_btnRealizarDevolucion1ActionPerformed
 
     private void btnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar1ActionPerformed
 
@@ -188,6 +188,8 @@ public class Devoluciones extends javax.swing.JFrame {
 
         // Limpiar la zona de resultados
         areaResultados1.setText("");
+        
+        this.dispose();
 
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCancelar1ActionPerformed

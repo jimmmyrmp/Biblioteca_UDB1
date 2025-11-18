@@ -111,13 +111,19 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Component id="lblTotal" min="-2" pref="63" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="lblDisponibles" min="-2" pref="88" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
-                  <Component id="lblPrestados" min="-2" pref="88" max="-2" attributes="0"/>
+                  <EmptySpace pref="232" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="volverMenu" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                          <Component id="lblDisponibles" min="-2" pref="88" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="193" max="-2" attributes="0"/>
+                          <Component id="lblPrestados" min="-2" pref="88" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
                   <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -131,7 +137,9 @@
                       <Component id="lblTotal" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lblPrestados" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="128" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="volverMenu" min="-2" pref="49" max="-2" attributes="0"/>
+                  <EmptySpace pref="44" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -151,6 +159,14 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Prestados: 0"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="volverMenu">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Volver al menu"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="volverMenuActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

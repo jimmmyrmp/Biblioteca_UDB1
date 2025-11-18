@@ -69,6 +69,11 @@ public class FormularioConfiguracionEJEM extends javax.swing.JFrame {
         });
 
         btnCancelar.setText("CANCELAR");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -139,11 +144,13 @@ public class FormularioConfiguracionEJEM extends javax.swing.JFrame {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
 guardarConfiguracion();
     }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+            this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelarActionPerformed
                                
 
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {                                            
-        cancelar();
-    }                                           
+                               
 
     private void cargarValorActual() {
         try {
