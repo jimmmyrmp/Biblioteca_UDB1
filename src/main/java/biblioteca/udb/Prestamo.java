@@ -98,15 +98,4 @@ public class Prestamo {
         this.montoMora = montoMora;
     }
     
-    @Override
-    public String toString() {
-        return "Prestamo{" +
-                "idPrestamo=" + idPrestamo +
-                ", idUsuario=" + idUsuario +
-                ", codigoEjemplar='" + codigoEjemplar + '\'' +
-                ", fechaPrestamo=" + fechaPrestamo +
-                ", fechaDevolucion=" + fechaDevolucion +
-                ", estado='" + estado + '\'' +
-                '}';
-    }
 }

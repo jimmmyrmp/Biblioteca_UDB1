@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package biblioteca.udb;
+import biblioteca.udb.menu.menuVista;
+import javax.swing.JFrame;
 
 /**
  *
@@ -11,11 +13,16 @@ package biblioteca.udb;
 public class FormularioPrestamos extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormularioPrestamos.class.getName());
-
+    private JFrame menuPrincipal;
     /**
      * Creates new form FormularioPrestamos
      */
     public FormularioPrestamos() {
+        initComponents();
+    }
+    
+        public FormularioPrestamos(JFrame menu) {
+        this.menuPrincipal = menu;  // Guardar referencia
         initComponents();
     }
 
@@ -58,7 +65,7 @@ public class FormularioPrestamos extends javax.swing.JFrame {
             }
         });
 
-        btnCancelar.setText("Cancelar");
+        btnCancelar.setText("Volver al menu");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarActionPerformed(evt);
@@ -192,6 +199,10 @@ public class FormularioPrestamos extends javax.swing.JFrame {
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         this.dispose();  
+        
+         if (menuPrincipal != null) {
+            menuPrincipal.setVisible(true);
+        }
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**

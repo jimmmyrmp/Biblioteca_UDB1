@@ -23,26 +23,14 @@ public class menuVista extends JFrame implements ActionListener {
         add(new JLabel("Seleccione que desea realizar:"));
 
         btnPrestamos = new JButton("Realizar Prestamos");
-        btnBiblioteca = new JButton("Biblioteca");
-        btnAgregarUser = new JButton("Agregar Usuario");
         btnEjemplares = new JButton("Consultar ejemplares");
-        btnDevoluciones = new JButton("Devoluciones");
-        btnControlPrestamos = new JButton("Control Prestamos");
 
 
         btnPrestamos.addActionListener(this);
-        btnBiblioteca.addActionListener(this);
-        btnAgregarUser.addActionListener(this);
         btnEjemplares.addActionListener(this);
-        btnDevoluciones.addActionListener(this);
-        btnControlPrestamos.addActionListener(this);
 
         add(btnPrestamos);
-        add(btnBiblioteca);
-        add(btnAgregarUser);
         add(btnEjemplares);
-        add(btnDevoluciones);
-        add(btnControlPrestamos);
 
         setLocationRelativeTo(null);
         setVisible(true);
@@ -53,20 +41,8 @@ public class menuVista extends JFrame implements ActionListener {
         if (e.getSource() == btnPrestamos) {
             new FormularioPrestamos().setVisible(true);
         }
-        else if (e.getSource() == btnBiblioteca) {
-            new bibliotecaVista().setVisible(true);
-        }
-        else if (e.getSource() == btnAgregarUser) {
-            new FormularioUsuarios().setVisible(true);
-        }
         else if (e.getSource() == btnEjemplares) {
             new ConsultaEjemplaresFORM().setVisible(true);
-        }
-        else if (e.getSource() == btnDevoluciones) {
-            new Devoluciones().setVisible(true);
-        }
-        else if (e.getSource() == btnControlPrestamos) {
-            new FormularioConfiguracionEJEM().setVisible(true);
         }
     }
 }
