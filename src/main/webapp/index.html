@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca UDB - Sistema de Gestión</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container-inicio {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 60px 40px;
+            text-align: center;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitulo {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .descripcion {
+            color: #888;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .menu-botones {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .boton {
+            padding: 16px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .boton-consultas {
+            background: linear-gradient(135deg, #336699 0%, #003366 100%);
+            color: white;
+        }
+
+        .boton-consultas:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(51, 102, 153, 0.4);
+        }
+
+        .boton-consultas:active {
+            transform: translateY(-1px);
+        }
+
+        .boton-admin {
+            background: linear-gradient(135deg, #999 0%, #666 100%);
+            color: white;
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .boton-admin:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .badge-construccion {
+            display: inline-block;
+            background-color: #ffb74d;
+            color: #333;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .info-tecnica {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .info-tecnica p {
+            margin-bottom: 8px;
+        }
+
+        .version {
+            font-weight: 600;
+            color: #336699;
+        }
+
+        @media (max-width: 600px) {
+            .container-inicio {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitulo {
+                font-size: 1rem;
+            }
+
+            .logo {
+                font-size: 3rem;
+            }
+
+            .boton {
+                padding: 14px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-inicio">
+        <div class="logo">📚</div>
+        
+        <h1>Biblioteca UDB</h1>
+        <p class="subtitulo">Sistema de Gestión de Ejemplares</p>
+        
+        <p class="descripcion">
+            Bienvenido al sistema de gestión de la Biblioteca de la Universidad Don Bosco.
+            Desde aquí puedes consultar y administrar los materiales disponibles.
+        </p>
+
+       <div class="menu-botones">
+    <a href="consultas" class="boton boton-consultas">
+        CONSULTA DE EJEMPLARES
+    </a>
+
+    <a href="prestamos" class="boton boton-consultas">
+        MÓDULO DE PRÉSTAMOS
+    </a>
+
+    <button class="boton boton-admin" disabled>
+        PANEL ADMINISTRATIVO
+        <div class="badge-construccion">En construcción</div>
+    </button>
+</div>
+
+
+        <div class="info-tecnica">
+            <p><span class="version">Versión:</span> 1.0 - Fase II Web</p>
+            <p>Tecnología: Java Servlets, JSP, MySQL</p>
+            <p>&copy; 2025 Universidad Don Bosco.</p>
+        </div>
+    </div>
+</body>
+</html>
