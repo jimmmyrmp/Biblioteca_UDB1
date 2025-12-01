@@ -9,6 +9,7 @@ biblioteca\udb\vistas\AudioVideoVista\AudioLibrosVista.class
 biblioteca\udb\vistas\textoVista\PeriodicosVista.class
 biblioteca\udb\ConsultaEjemplaresFORM.class
 biblioteca\udb\ConexionBD.class
+biblioteca\udb\ConsultasServlet.class
 biblioteca\udb\FormularioCambiarContraseña$1.class
 biblioteca\udb\ConsultaEjemplaresFORM$5.class
 biblioteca\udb\ConfiguracionEJEM.class
@@ -17,14 +18,12 @@ biblioteca\udb\Devoluciones.class
 biblioteca\udb\vistas\bibliotecaVista.class
 biblioteca\udb\ejemplares\textos\Tesis.class
 biblioteca\udb\FormularioCambiarContraseña.class
-biblioteca\udb\FormularioCambiarContraseña$4.class
 biblioteca\udb\FormularioRestablecerContraseña.class
 biblioteca\udb\FormularioPrestamos$2.class
 biblioteca\udb\Biblioteca_UDB1.class
 biblioteca\udb\ConfiguracionEJEMPLARES.class
 biblioteca\udb\Prestamo.class
 biblioteca\udb\ejemplares\audio_video\AudioLibro.class
-biblioteca\udb\FormularioUsuarios$5.class
 biblioteca\udb\menu\menuAdmin.class
 biblioteca\udb\GestionDevoluciones$Prestamo.class
 biblioteca\udb\vistas\textoVista\RevistasVista.class
@@ -54,7 +53,6 @@ biblioteca\udb\ejemplares\audio_video\CD.class
 biblioteca\udb\ejemplares\digitales\Ebook.class
 biblioteca\udb\GestionUsuarios.class
 biblioteca\udb\vistas\textoVista\TesisVista.class
-biblioteca\udb\FormularioCambiarContraseña$3.class
 biblioteca\udb\FormularioLogin$2.class
 biblioteca\udb\ejemplares\textos\Folletos.class
 biblioteca\udb\ejemplares\catalogo.class
@@ -66,7 +64,6 @@ biblioteca\udb\ejemplares\Cartografia\Atlas.class
 biblioteca\udb\vistas\CartograficaVista\AtlasVista.class
 biblioteca\udb\ejemplares\academico\InformeTecnico.class
 biblioteca\udb\FormularioUsuarios$1.class
-biblioteca\udb\FormularioUsuarios$4.class
 biblioteca\udb\GestionPrestamos.class
 biblioteca\udb\menu\menuVista.class
 biblioteca\udb\FormularioRestablecerContraseña$1.class

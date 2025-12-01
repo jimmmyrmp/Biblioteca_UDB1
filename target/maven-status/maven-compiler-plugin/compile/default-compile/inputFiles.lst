@@ -1,47 +1,48 @@
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\Biblioteca_UDB1.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ConexionBD.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ConfiguracionEJEM.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ConfiguracionEJEMPLARES.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ConsultaEjemplaresFORM.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\Devoluciones.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\Ejemplar1.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\academico\InformeTecnico.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\audio_video\AudioLibro.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\audio_video\CD.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\audio_video\DVD.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\Cartografia\Atlas.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\Cartografia\Mapa.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\catalogo.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\digitales\Ebook.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\ejemplares.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\textos\Folletos.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\textos\Libros.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\textos\periodicos.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\textos\Revistas.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\textos\Tesis.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\FormularioCambiarContraseña.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\FormularioConfiguracionEJEM.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\FormularioLogin.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\FormularioPrestamos.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\FormularioRestablecerContraseña.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\FormularioUsuarios.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\GestionDevoluciones.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\GestionPrestamos.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\GestionUsuarios.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\menu\menuAdmin.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\menu\menuVista.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\Prestamo.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\Usuario.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\AcademicoVista\InformesTecnicosVista.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\AudioVideoVista\AudioLibrosVista.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\AudioVideoVista\CDVista.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\AudioVideoVista\DVDVista.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\bibliotecaVista.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\CartograficaVista\AtlasVista.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\CartograficaVista\MapaVista.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\DigitalVista\EBookVista.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\textoVista\FolletosVista.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\textoVista\LibroVista.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\textoVista\PeriodicosVista.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\textoVista\RevistasVista.java
-C:\Users\noche\OneDrive\Escritorio\Tec Computacion\CICLO 2\POO\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\textoVista\TesisVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\textos\Revistas.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\GestionUsuarios.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ConsultasServlet.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ConfiguracionEJEMPLARES.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\Devoluciones.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\catalogo.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\textoVista\FolletosVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\bibliotecaVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\Ejemplar1.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\Prestamo.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\Biblioteca_UDB1.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\DigitalVista\EBookVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\AudioVideoVista\DVDVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\textoVista\LibroVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\CartograficaVista\AtlasVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\Cartografia\Mapa.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\CartograficaVista\MapaVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\AcademicoVista\InformesTecnicosVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\audio_video\AudioLibro.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\FormularioLogin.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\audio_video\DVD.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\GestionDevoluciones.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\FormularioRestablecerContraseña.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\textoVista\PeriodicosVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\Cartografia\Atlas.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\textos\Libros.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\FormularioCambiarContraseña.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\FormularioPrestamos.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\FormularioUsuarios.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\GestionPrestamos.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\FormularioConfiguracionEJEM.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\Usuario.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ConsultaEjemplaresFORM.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\digitales\Ebook.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\textoVista\TesisVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\textos\Folletos.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\textos\periodicos.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\menu\menuAdmin.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\menu\menuVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\academico\InformeTecnico.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\textos\Tesis.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\AudioVideoVista\AudioLibrosVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\textoVista\RevistasVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ConfiguracionEJEM.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\vistas\AudioVideoVista\CDVista.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\ejemplares.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ejemplares\audio_video\CD.java
+C:\Users\jimmy\OneDrive\Documentos\NetBeansProjects\Biblioteca_UDB1\src\main\java\biblioteca\udb\ConexionBD.java

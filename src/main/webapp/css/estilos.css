@@ -1,0 +1,357 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+   ESTILOS GENERALES
+   */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 
+   HEADER
+    */
+
+header {
+    background: linear-gradient(135deg, #336699 0%, #003366 100%);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* 
+   FORMULARIO
+    */
+
+.formulario-seccion {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.formulario-busqueda {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: end;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-campo label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.grupo-campo input,
+.grupo-campo select {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: white;
+    font-family: inherit;
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus {
+    outline: none;
+    border-color: #336699;
+    box-shadow: 0 0 0 3px rgba(51, 102, 153, 0.1);
+}
+
+.grupo-campo input::placeholder {
+    color: #999;
+}
+
+.grupo-botones {
+    display: flex;
+    gap: 10px;
+    grid-column: 1 / -1;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.boton {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.boton-buscar {
+    background: linear-gradient(135deg, #336699 0%, #003366 100%);
+    color: white;
+    flex: 1;
+    max-width: 200px;
+}
+
+.boton-buscar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(51, 102, 153, 0.3);
+}
+
+.boton-buscar:active {
+    transform: translateY(0);
+}
+
+.boton-limpiar {
+    background-color: #e0e0e0;
+    color: #333;
+    flex: 1;
+    max-width: 200px;
+}
+
+.boton-limpiar:hover {
+    background-color: #d0d0d0;
+    transform: translateY(-2px);
+}
+
+/* 
+   RESULTADOS
+    */
+
+.resultados-seccion {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.estadisticas {
+    background-color: #f0f8ff;
+    padding: 15px 20px;
+    border-left: 4px solid #336699;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.estadisticas p {
+    margin: 0;
+    color: #336699;
+    font-weight: 500;
+}
+
+.mensaje-info {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #ffeeba;
+    text-align: center;
+    font-weight: 500;
+}
+
+.tabla-resultados {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.tabla-resultados thead {
+    background: linear-gradient(135deg, #336699 0%, #003366 100%);
+    color: white;
+}
+
+.tabla-resultados th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.tabla-resultados td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-resultados tbody tr {
+    transition: background-color 0.2s;
+}
+
+.tabla-resultados tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.tabla-resultados tbody tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+.tabla-resultados tbody tr:nth-child(odd):hover {
+    background-color: #f0f0f0;
+}
+
+.estado {
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.estado.disponible {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+.estado.prestado {
+    background-color: #ffcccc;
+    color: #c62828;
+}
+
+/* 
+   FOOTER
+    */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* 
+   RESPONSIVE DESIGN
+    */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .formulario-busqueda {
+        grid-template-columns: 1fr;
+    }
+
+    .grupo-botones {
+        grid-column: 1;
+        flex-direction: column;
+    }
+
+    .boton {
+        max-width: none;
+        width: 100%;
+    }
+
+    .tabla-resultados {
+        font-size: 0.85rem;
+    }
+
+    .tabla-resultados th,
+    .tabla-resultados td {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .formulario-seccion,
+    .resultados-seccion {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .tabla-resultados {
+        font-size: 0.75rem;
+    }
+
+    .tabla-resultados th,
+    .tabla-resultados td {
+        padding: 8px 5px;
+    }
+
+    .estado {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+}
+
+/* 
+   ANIMACIONES Y TRANSICIONES
+    */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.formulario-seccion,
+.resultados-seccion {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
