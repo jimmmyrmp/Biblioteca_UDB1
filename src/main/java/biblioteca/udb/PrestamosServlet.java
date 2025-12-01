@@ -8,17 +8,14 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-/**
- * Servlet encargado de gestionar los préstamos en la versión web.
- * Utiliza la lógica de la clase GestionPrestamos (Fase de escritorio).
- */
+
 @WebServlet(name = "PrestamosServlet", urlPatterns = {"/prestamos"})
 public class PrestamosServlet extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Solo muestra el formulario
+      //muestra formulario
         request.getRequestDispatcher("/WEB-INF/jsp/prestamos.jsp").forward(request, response);
     }
 
@@ -33,7 +30,7 @@ public class PrestamosServlet extends HttpServlet {
         String mensaje = "";
         String tipoMensaje = ""; // "ok" | "error"
 
-        // Para que el formulario se rellene de nuevo con lo que escribió el usuario
+        // recordar que esta parte es para que el formulario se rellene de nuevo con lo que escribió el usuario
         request.setAttribute("idUsuarioTexto", idUsuarioTexto);
         request.setAttribute("codigoEjemplarTexto", codigoEjemplar);
         request.setAttribute("diasSeleccionados", diasTexto);
@@ -52,17 +49,17 @@ public class PrestamosServlet extends HttpServlet {
 
                 GestionPrestamos gestion = new GestionPrestamos();
 
-                // 1. Verificar mora
+                // 1.verificar mora
                 if (gestion.usuarioTieneMora(idUsuario)) {
                     mensaje = "El usuario tiene mora registrada. No se puede realizar el préstamo.";
                     tipoMensaje = "error";
 
-                // 2. Verificar disponibilidad
+                // 2.verificar disponibilidad
                 } else if (!gestion.ejemplarDisponible(codigoEjemplar)) {
                     mensaje = "El ejemplar no está disponible. Puede estar prestado o no existir.";
                     tipoMensaje = "error";
 
-                // 3. Intentar realizar el préstamo
+                // 3.intentar realizar el préstamo
                 } else {
                     boolean resultado = gestion.realizarPrestamo(idUsuario, codigoEjemplar, diasPrestamo);
 
@@ -94,7 +91,7 @@ public class PrestamosServlet extends HttpServlet {
         request.setAttribute("mensaje", mensaje);
         request.setAttribute("tipoMensaje", tipoMensaje);
 
-        // Siempre regresamos al mismo JSP
+        // para siempre regresamos al mismo JSP
         request.getRequestDispatcher("/WEB-INF/jsp/prestamos.jsp").forward(request, response);
     }
 }
