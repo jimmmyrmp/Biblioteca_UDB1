@@ -1,36 +1,59 @@
 package biblioteca.udb;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 
 public class ConexionBD {
-    
-    private static final String URL = "jdbc:mysql://localhost:3306/biblioteca_udb";
-    private static final String USUARIO = "root";
-    private static final String CONTRASEÑA = "";
-    
+
+    // DataSource del pool de conexiones configurado en Tomcat
+    private static DataSource dataSource;
+
+static {
+    try {
+        System.out.println("DEBUG POOL V2 ARRANCANDO...");
+        InitialContext ctx = new InitialContext();
+        dataSource = (DataSource) ctx.lookup("java:/comp/env/jdbc/bibliotecaPool");
+        System.out.println("✅ DataSource 'jdbc/bibliotecaPool' inicializado correctamente.");
+    } catch (NamingException e) {
+        System.err.println("❌ ERROR al obtener el DataSource: " + e.getMessage());
+    }
+}
+
+
+    /**
+     * Obtiene una conexión desde el pool de conexiones de Tomcat.
+     */
     public static Connection conectar() {
         Connection conexion = null;
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            conexion = DriverManager.getConnection(URL, USUARIO, CONTRASEÑA);
-            System.out.println("Conexión exitosa a la BD");
-        } catch (ClassNotFoundException e) {
-            System.out.println("Driver no encontrado: " + e.getMessage());
-        } catch (SQLException e) {
-            System.out.println("Error al conectar: " + e.getMessage());
+
+        if (dataSource == null) {
+            System.err.println("❌ DataSource no inicializado. Revisa la configuración JNDI en Tomcat.");
+            return null;
         }
+
+        try {
+            conexion = dataSource.getConnection();
+            System.out.println("🔵 Conexión obtenida desde el pool de Tomcat.");
+        } catch (SQLException e) {
+            System.err.println("❌ Error al obtener conexión del pool: " + e.getMessage());
+        }
+
         return conexion;
     }
-    
+
+    /**
+     * Cierra la conexión devolviéndola al pool.
+     */
     public static void cerrarConexion(Connection conexion) {
         if (conexion != null) {
             try {
-                conexion.close();
-                System.out.println("Conexión cerrada");
+                conexion.close(); // vuelve al pool
+                System.out.println("🟢 Conexión devuelta al pool.");
             } catch (SQLException e) {
-                System.out.println("Error al cerrar: " + e.getMessage());
+                System.err.println("❌ Error al cerrar conexión: " + e.getMessage());
             }
         }
     }

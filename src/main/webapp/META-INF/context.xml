@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/Biblioteca_UDB1"/>
+<Context path="/Biblioteca_UDB1">
+
+    <!-- Pool de conexiones para la base de datos biblioteca_udb -->
+    <Resource name="jdbc/bibliotecaPool"
+              auth="Container"
+              type="javax.sql.DataSource"
+              maxTotal="20"
+              maxIdle="10"
+              maxWaitMillis="10000"
+              username="root"
+              password=""
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/biblioteca_udb?useSSL=false&amp;serverTimezone=UTC"/>
+</Context>
